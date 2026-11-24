@@ -4,7 +4,8 @@ export const CLUBS = [
     name: 'Valorant India Hub',
     slug: 'valorant-india-hub',
     game: 'valorant',
-    description: 'The largest Valorant community in India. Share clips, find teammates, and discuss strategies.',
+    description:
+      'The largest Valorant community in India. Share clips, find teammates, and discuss strategies.',
     banner: null,
     avatar: null,
     members: 4820,
@@ -14,9 +15,33 @@ export const CLUBS = [
     isPublic: true,
     tags: ['Valorant', 'India', 'Competitive', 'Community'],
     recentPosts: [
-      { id: 'post-1', author: 'ShadowStrike', content: 'Just hit Diamond II! Grinding for Radiant this act 🔥', likes: 142, comments: 28, timestamp: '2h ago', type: 'text' },
-      { id: 'post-2', author: 'NovaBurst', content: 'Looking for a 5th for ranked. Plat+ only. DM me.', likes: 34, comments: 12, timestamp: '4h ago', type: 'text' },
-      { id: 'post-3', author: 'ArcLight', content: 'Check out this insane Jett clip from ranked!', likes: 287, comments: 56, timestamp: '6h ago', type: 'clip' },
+      {
+        id: 'post-1',
+        author: 'ShadowStrike',
+        content: 'Just hit Diamond II! Grinding for Radiant this act 🔥',
+        likes: 142,
+        comments: 28,
+        timestamp: '2h ago',
+        type: 'text',
+      },
+      {
+        id: 'post-2',
+        author: 'NovaBurst',
+        content: 'Looking for a 5th for ranked. Plat+ only. DM me.',
+        likes: 34,
+        comments: 12,
+        timestamp: '4h ago',
+        type: 'text',
+      },
+      {
+        id: 'post-3',
+        author: 'ArcLight',
+        content: 'Check out this insane Jett clip from ranked!',
+        likes: 287,
+        comments: 56,
+        timestamp: '6h ago',
+        type: 'clip',
+      },
     ],
     createdAt: '2024-02-14',
   },
@@ -35,8 +60,24 @@ export const CLUBS = [
     isPublic: true,
     tags: ['BGMI', 'Squad', 'India', 'Mobile'],
     recentPosts: [
-      { id: 'post-4', author: 'ThunderClap', content: 'Our squad won the BGMI National Champs!! 🏆', likes: 1240, comments: 180, timestamp: '1h ago', type: 'text' },
-      { id: 'post-5', author: 'AshFury', content: 'Tips for Miramar ranked play — thread below.', likes: 220, comments: 84, timestamp: '3h ago', type: 'text' },
+      {
+        id: 'post-4',
+        author: 'ThunderClap',
+        content: 'Our squad won the BGMI National Champs!! 🏆',
+        likes: 1240,
+        comments: 180,
+        timestamp: '1h ago',
+        type: 'text',
+      },
+      {
+        id: 'post-5',
+        author: 'AshFury',
+        content: 'Tips for Miramar ranked play — thread below.',
+        likes: 220,
+        comments: 84,
+        timestamp: '3h ago',
+        type: 'text',
+      },
     ],
     createdAt: '2024-01-20',
   },
@@ -55,7 +96,15 @@ export const CLUBS = [
     isPublic: true,
     tags: ['CS2', 'Pro', 'Esports', 'Global'],
     recentPosts: [
-      { id: 'post-6', author: 'VoidWalker', content: 'The CS2 Invitational was insane. What a final!', likes: 320, comments: 94, timestamp: '5h ago', type: 'text' },
+      {
+        id: 'post-6',
+        author: 'VoidWalker',
+        content: 'The CS2 Invitational was insane. What a final!',
+        likes: 320,
+        comments: 94,
+        timestamp: '5h ago',
+        type: 'text',
+      },
     ],
     createdAt: '2024-03-05',
   },
@@ -74,11 +123,19 @@ export const CLUBS = [
     isPublic: true,
     tags: ['Free Fire', 'Community', 'Mobile', 'Tips'],
     recentPosts: [
-      { id: 'post-7', author: 'CrimsonEdge', content: 'Pro League registration is OPEN! Join now.', likes: 480, comments: 112, timestamp: '30m ago', type: 'text' },
+      {
+        id: 'post-7',
+        author: 'CrimsonEdge',
+        content: 'Pro League registration is OPEN! Join now.',
+        likes: 480,
+        comments: 112,
+        timestamp: '30m ago',
+        type: 'text',
+      },
     ],
     createdAt: '2024-02-28',
   },
 ];
 
-export const getClubById = (id) => CLUBS.find(c => c.id === id);
-export const getClubsByGame = (game) => CLUBS.filter(c => c.game === game);
+export const getClubById = (id) => CLUBS.find((c) => c.id === id);
+export const getClubsByGame = (game) => CLUBS.filter((c) => c.game === game);

@@ -5,7 +5,8 @@ export const GAMES = [
     name: 'VALORANT',
     developer: 'Riot Games',
     genre: 'Tactical FPS',
-    description: 'A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities.',
+    description:
+      'A 5v5 character-based tactical shooter where precise gunplay meets unique agent abilities.',
     color: '#FF4655',
     gradientFrom: '#FF4655',
     gradientTo: '#7C0A17',
@@ -19,7 +20,17 @@ export const GAMES = [
     card: '/games/valorant-card.jpg',
     maxTeamSize: 5,
     modes: ['5v5', 'Spike Rush', 'Deathmatch'],
-    ranks: ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Diamond', 'Ascendant', 'Immortal', 'Radiant'],
+    ranks: [
+      'Iron',
+      'Bronze',
+      'Silver',
+      'Gold',
+      'Platinum',
+      'Diamond',
+      'Ascendant',
+      'Immortal',
+      'Radiant',
+    ],
     statFields: ['Kills', 'Deaths', 'Assists', 'Headshot %', 'Win Rate', 'ACS'],
   },
   {
@@ -51,7 +62,8 @@ export const GAMES = [
     name: 'Free Fire',
     developer: 'Garena',
     genre: 'Battle Royale',
-    description: 'Fast-paced mobile battle royale with 50-player matches and unique character abilities.',
+    description:
+      'Fast-paced mobile battle royale with 50-player matches and unique character abilities.',
     color: '#FF7A00',
     gradientFrom: '#FF7A00',
     gradientTo: '#7C3800',
@@ -74,7 +86,8 @@ export const GAMES = [
     name: 'Counter-Strike 2',
     developer: 'Valve',
     genre: 'Tactical FPS',
-    description: 'The next generation of the world\'s greatest competitive game, rebuilt on the Source 2 engine.',
+    description:
+      "The next generation of the world's greatest competitive game, rebuilt on the Source 2 engine.",
     color: '#F9A825',
     gradientFrom: '#F9A825',
     gradientTo: '#5D4037',
@@ -88,7 +101,25 @@ export const GAMES = [
     card: '/games/cs2-card.jpg',
     maxTeamSize: 5,
     modes: ['Competitive', 'Premier', 'Deathmatch', 'Arms Race'],
-    ranks: ['Silver I', 'Silver II', 'Silver III', 'Silver IV', 'Silver Elite', 'Gold Nova I', 'Gold Nova II', 'Gold Nova III', 'Gold Nova Master', 'Master Guardian I', 'Master Guardian II', 'Master Guardian Elite', 'Distinguished Master Guardian', 'Legendary Eagle', 'Legendary Eagle Master', 'Supreme Master First Class', 'Global Elite'],
+    ranks: [
+      'Silver I',
+      'Silver II',
+      'Silver III',
+      'Silver IV',
+      'Silver Elite',
+      'Gold Nova I',
+      'Gold Nova II',
+      'Gold Nova III',
+      'Gold Nova Master',
+      'Master Guardian I',
+      'Master Guardian II',
+      'Master Guardian Elite',
+      'Distinguished Master Guardian',
+      'Legendary Eagle',
+      'Legendary Eagle Master',
+      'Supreme Master First Class',
+      'Global Elite',
+    ],
     statFields: ['Kills', 'Deaths', 'Assists', 'Headshot %', 'Win Rate', 'Rating'],
   },
   {
@@ -97,7 +128,8 @@ export const GAMES = [
     name: 'Clash of Clans',
     developer: 'Supercell',
     genre: 'Strategy',
-    description: 'Build your village, train your troops, and battle against millions of players worldwide.',
+    description:
+      'Build your village, train your troops, and battle against millions of players worldwide.',
     color: '#10B981',
     gradientFrom: '#10B981',
     gradientTo: '#064E3B',
@@ -112,7 +144,14 @@ export const GAMES = [
     maxTeamSize: 15,
     modes: ['War', 'Clan Games', 'CWL', '1v1 Friendly'],
     ranks: ['Bronze', 'Silver', 'Gold', 'Crystal', 'Master', 'Champion', 'Titan', 'Legend'],
-    statFields: ['Trophies', 'War Stars', 'Clan War Wins', 'Attack Wins', 'Town Hall Level', 'Donations'],
+    statFields: [
+      'Trophies',
+      'War Stars',
+      'Clan War Wins',
+      'Attack Wins',
+      'Town Hall Level',
+      'Donations',
+    ],
   },
   {
     id: 'league-of-legends',
@@ -120,7 +159,8 @@ export const GAMES = [
     name: 'League of Legends',
     developer: 'Riot Games',
     genre: 'MOBA',
-    description: 'A team-based strategy game where two teams of five champions face off to destroy the other\'s base.',
+    description:
+      "A team-based strategy game where two teams of five champions face off to destroy the other's base.",
     color: '#C89B3C',
     gradientFrom: '#C89B3C',
     gradientTo: '#4B3012',
@@ -134,10 +174,21 @@ export const GAMES = [
     card: '/games/lol-card.jpg',
     maxTeamSize: 5,
     modes: ['Ranked Solo/Duo', 'Ranked Flex', 'ARAM', 'Normal'],
-    ranks: ['Iron', 'Bronze', 'Silver', 'Gold', 'Platinum', 'Emerald', 'Diamond', 'Master', 'Grandmaster', 'Challenger'],
+    ranks: [
+      'Iron',
+      'Bronze',
+      'Silver',
+      'Gold',
+      'Platinum',
+      'Emerald',
+      'Diamond',
+      'Master',
+      'Grandmaster',
+      'Challenger',
+    ],
     statFields: ['KDA', 'CS Per Minute', 'Vision Score', 'Damage Dealt', 'Win Rate', 'LP'],
   },
 ];
 
-export const getGameBySlug = (slug) => GAMES.find(g => g.slug === slug);
-export const getGameById = (id) => GAMES.find(g => g.id === id);
+export const getGameBySlug = (slug) => GAMES.find((g) => g.slug === slug);
+export const getGameById = (id) => GAMES.find((g) => g.id === id);

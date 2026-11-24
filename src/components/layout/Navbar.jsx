@@ -66,6 +66,17 @@ export default function Navbar() {
     setMobileOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (location.hash === '#about') {
+      const timer = window.setTimeout(
+        () => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }),
+        0,
+      );
+      return () => window.clearTimeout(timer);
+    }
+    return undefined;
+  }, [location.pathname, location.hash]);
+
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/';
     return location.pathname.startsWith(path);
@@ -82,7 +93,6 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-
             {/* ── Logo ───────────────────────────────────────────────────── */}
             <Link to="/" className="flex items-center gap-2.5 flex-shrink-0">
               <div className="w-8 h-8 bg-gradient-to-br from-elixir-secondary to-elixir-accent rounded-lg flex items-center justify-center shadow-glow-sm">
@@ -124,10 +134,7 @@ export default function Navbar() {
                     <UserAvatar user={user} />
                     <span className="font-medium text-white hidden lg:block">{user?.username}</span>
                   </div>
-                  <button
-                    onClick={() => navigate('/league')}
-                    className="btn-primary btn-sm"
-                  >
+                  <button onClick={() => navigate('/league')} className="btn-primary btn-sm">
                     Dashboard
                     <ChevronRight size={14} />
                   </button>

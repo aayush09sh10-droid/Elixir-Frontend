@@ -37,9 +37,7 @@ function getAvatarColor(username = '') {
 }
 
 function UserAvatar({ user, size = 'sm' }) {
-  const initials = user?.username
-    ? user.username.slice(0, 2).toUpperCase()
-    : '??';
+  const initials = user?.username ? user.username.slice(0, 2).toUpperCase() : '??';
   const sizeClass = size === 'sm' ? 'w-8 h-8 text-xs' : 'w-10 h-10 text-sm';
   if (user?.avatar) {
     return (
@@ -111,15 +109,15 @@ export default function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobile
     navigate('/');
   };
 
-  const roleBadgeClass = {
-    admin: 'badge-error',
-    organizer: 'badge-warning',
-    user: 'badge-muted',
-  }[user?.role] || 'badge-muted';
+  const roleBadgeClass =
+    {
+      admin: 'badge-error',
+      organizer: 'badge-warning',
+      user: 'badge-muted',
+    }[user?.role] || 'badge-muted';
 
   const sidebarContent = (
     <div className="flex flex-col h-full">
-
       {/* ── Collapse toggle (desktop) ─────────────────────────────────── */}
       <div className="hidden lg:flex items-center justify-between px-3 pt-4 pb-2">
         {!collapsed && (
@@ -150,7 +148,10 @@ export default function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobile
               className="bg-transparent outline-none text-sm text-white placeholder-ex-text-muted flex-1 min-w-0"
             />
             <button
-              onClick={() => { setSearchOpen(false); setSearchQuery(''); }}
+              onClick={() => {
+                setSearchOpen(false);
+                setSearchQuery('');
+              }}
               className="text-ex-text-muted hover:text-white transition-colors"
             >
               <X size={14} />
@@ -158,7 +159,9 @@ export default function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobile
           </div>
         ) : (
           <button
-            onClick={() => { if (!collapsed) setSearchOpen(true); }}
+            onClick={() => {
+              if (!collapsed) setSearchOpen(true);
+            }}
             title={collapsed ? 'Search' : undefined}
             className={`nav-item w-full ${collapsed ? 'justify-center px-0' : ''}`}
           >
@@ -178,7 +181,9 @@ export default function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobile
             <span className="text-xl flex-shrink-0">{selectedGame.icon || '🎮'}</span>
             {!collapsed && (
               <div className="min-w-0">
-                <p className="text-xs text-ex-text-muted font-medium leading-none mb-0.5">Active Game</p>
+                <p className="text-xs text-ex-text-muted font-medium leading-none mb-0.5">
+                  Active Game
+                </p>
                 <p className="text-sm font-semibold text-white truncate">{selectedGame.name}</p>
               </div>
             )}
@@ -285,7 +290,9 @@ export default function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobile
             <Link to="/profile" className="flex items-center gap-2.5 flex-1 min-w-0">
               <UserAvatar user={user} size="sm" />
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold text-white truncate">{user?.username || 'Guest'}</p>
+                <p className="text-sm font-semibold text-white truncate">
+                  {user?.username || 'Guest'}
+                </p>
                 <span className={`badge text-[10px] px-1.5 py-0 ${roleBadgeClass}`}>
                   {user?.role || 'user'}
                 </span>

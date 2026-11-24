@@ -5,20 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src"
   },
   "devDependencies": {
     "autoprefixer": "^10.7.0",
     "postcss": "^8.5.33",
+    "prettier": "^3.10.1",
     "tailwindcss": "^3.4.19",
-    "typescript": "~7.0.2",
     "vite": "^8.3.6"
   },
   "dependencies": {
+    "lucide-react": "^1.78.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "lucide-react": "^1.78.0",
     "react-router-dom": "^7.18.6"
   }
 }

@@ -4,7 +4,8 @@ export const TOURNAMENTS = [
     name: 'ELIXIR Valorant Open Season 1',
     game: 'valorant',
     gameSlug: 'valorant',
-    description: 'The premier open Valorant tournament on ELIXIR. Compete for ₹50,000 prize pool across 64 teams.',
+    description:
+      'The premier open Valorant tournament on ELIXIR. Compete for ₹50,000 prize pool across 64 teams.',
     banner: '/tournaments/valorant-open.jpg',
     format: 'Single Elimination',
     mode: 'Squad (5v5)',
@@ -32,7 +33,7 @@ export const TOURNAMENTS = [
     name: 'BGMI National Championship',
     game: 'bgmi',
     gameSlug: 'bgmi',
-    description: 'India\'s biggest BGMI tournament with 128 squads battling across 6 group stages.',
+    description: "India's biggest BGMI tournament with 128 squads battling across 6 group stages.",
     banner: '/tournaments/bgmi-national.jpg',
     format: 'Group Stage + Knockout',
     mode: 'Squad (4v4)',
@@ -88,7 +89,8 @@ export const TOURNAMENTS = [
     name: 'Free Fire Pro League',
     game: 'free-fire',
     gameSlug: 'free-fire',
-    description: 'Weekly pro league for top Free Fire players. Points accumulate for monthly finals.',
+    description:
+      'Weekly pro league for top Free Fire players. Points accumulate for monthly finals.',
     banner: '/tournaments/freefire-league.jpg',
     format: 'League Format',
     mode: 'Squad (4v4)',
@@ -169,8 +171,9 @@ export const TOURNAMENTS = [
   },
 ];
 
-export const getTournamentById = (id) => TOURNAMENTS.find(t => t.id === id);
-export const getTournamentsByGame = (gameSlug) => TOURNAMENTS.filter(t => t.gameSlug === gameSlug);
-export const getFeaturedTournaments = () => TOURNAMENTS.filter(t => t.featured);
-export const getLiveTournaments = () => TOURNAMENTS.filter(t => t.status === 'live');
-export const getUpcomingTournaments = () => TOURNAMENTS.filter(t => t.status === 'upcoming');
+export const getTournamentById = (id) => TOURNAMENTS.find((t) => t.id === id);
+export const getTournamentsByGame = (gameSlug) =>
+  TOURNAMENTS.filter((t) => t.gameSlug === gameSlug);
+export const getFeaturedTournaments = () => TOURNAMENTS.filter((t) => t.featured);
+export const getLiveTournaments = () => TOURNAMENTS.filter((t) => t.status === 'live');
+export const getUpcomingTournaments = () => TOURNAMENTS.filter((t) => t.status === 'upcoming');

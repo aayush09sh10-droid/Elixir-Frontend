@@ -90,5 +90,5 @@ export const TEAMS = [
   },
 ];
 
-export const getTeamById = (id) => TEAMS.find(t => t.id === id);
-export const getTeamsByGame = (gameSlug) => TEAMS.filter(t => t.gameSlug === gameSlug);
+export const getTeamById = (id) => TEAMS.find((t) => t.id === id);
+export const getTeamsByGame = (gameSlug) => TEAMS.filter((t) => t.gameSlug === gameSlug);

@@ -100,9 +100,7 @@ function NotificationBell() {
           <div className="absolute right-0 top-full mt-2 w-80 bg-elixir-card border border-elixir-border rounded-xl shadow-2xl z-20 overflow-hidden">
             <div className="flex items-center justify-between px-4 py-3 border-b border-elixir-border">
               <span className="text-sm font-semibold text-white">Notifications</span>
-              {unreadCount > 0 && (
-                <span className="badge badge-primary">{unreadCount} new</span>
-              )}
+              {unreadCount > 0 && <span className="badge badge-primary">{unreadCount} new</span>}
             </div>
             <div className="max-h-72 overflow-y-auto no-scrollbar">
               {MOCK_NOTIFICATIONS.map((n) => (
@@ -159,7 +157,6 @@ export default function AppLayout({ children }) {
 
       {/* ── Main area ────────────────────────────────────────────────────── */}
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-
         {/* ── Top bar ──────────────────────────────────────────────────────── */}
         <header className="flex-shrink-0 h-14 bg-elixir-bg-secondary border-b border-elixir-border flex items-center px-4 gap-3 z-30">
           {/* Mobile hamburger */}
@@ -181,7 +178,10 @@ export default function AppLayout({ children }) {
             </Link>
             {breadcrumbs.map((crumb) => (
               <React.Fragment key={crumb.path}>
-                <ChevronRight size={14} className="text-ex-text-muted flex-shrink-0 hidden sm:block" />
+                <ChevronRight
+                  size={14}
+                  className="text-ex-text-muted flex-shrink-0 hidden sm:block"
+                />
                 {crumb.isLast ? (
                   <span className="text-sm font-semibold text-white truncate">{crumb.label}</span>
                 ) : (
@@ -225,9 +225,7 @@ export default function AppLayout({ children }) {
 
         {/* ── Scrollable page content ───────────────────────────────────────── */}
         <main className="flex-1 overflow-y-auto">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-            {children}
-          </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">{children}</div>
         </main>
       </div>
     </div>
