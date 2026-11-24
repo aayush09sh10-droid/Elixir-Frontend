@@ -61,7 +61,7 @@ function UserAvatar({ user, size = 'sm' }) {
 
 // ── Nav item data ───────────────────────────────────────────────────────────────
 const MAIN_NAV = [
-  { label: 'League', path: '/league', icon: Trophy },
+  { label: 'Dashboard', path: '/dashboard', icon: Trophy },
   { label: 'Tournaments', path: '/tournaments', icon: Target },
   { label: 'Rank', path: '/leaderboard', icon: BarChart2 },
   { label: 'Track', path: '/track', icon: TrendingUp },
